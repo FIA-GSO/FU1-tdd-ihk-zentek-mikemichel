@@ -27,3 +27,13 @@ def test_grade_result_percentage__check_for_percentage_value():
     # Act
     with pytest.raises(TypeError):
         grade_result_percentage(test_value_points, test_value_max_points)
+
+
+def test_grade_result_percentage__check_for_negativ_values():
+    # Arrange
+    test_value_points = -75.0
+    test_value_max_points = 75.0
+
+    # Act
+    with pytest.raises(ValueError):
+        grade_result_percentage(test_value_points, test_value_max_points)
