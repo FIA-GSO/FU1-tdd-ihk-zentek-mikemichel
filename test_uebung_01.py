@@ -51,7 +51,7 @@ def test_grade_result_percentage__check_for_negativ_points_values():
 def test_grade_result_percentage__check_for_negativ_max_points_values():
     # Arrange
     test_value_points = 0.01
-    test_value_max_points = -15.0
+    test_value_max_points = -0.01
 
     # Act
     with pytest.raises(ValueError):
